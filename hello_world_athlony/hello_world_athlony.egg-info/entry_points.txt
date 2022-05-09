@@ -1,3 +1,2 @@
 [console_scripts]
 greeting = hello_world_athlony.main:greeting
-

@@ -7,15 +7,15 @@ from normalize import normalize
 
 def handle_media(filename: Path, target_folder: Path):
     target_folder.mkdir(exist_ok=True, parents=True)
-    filename.replace(target_folder / normalize(filename.name))
+    filename.replace(target_folder / (normalize(filename.stem) + filename.suffix))
 
 def handle_documents(filename: Path, target_folder: Path):
     target_folder.mkdir(exist_ok=True, parents=True)
-    filename.replace(target_folder / normalize(filename.name))
+    filename.replace(target_folder / (normalize(filename.stem) + filename.suffix))
 
 def handle_other(filename: Path, target_folder: Path):
     target_folder.mkdir(exist_ok=True, parents=True)
-    filename.replace(target_folder / normalize(filename.name))
+    filename.replace(target_folder / (normalize(filename.stem) + filename.suffix))
 
 
 def handle_archive(filename: Path, target_folder: Path):
